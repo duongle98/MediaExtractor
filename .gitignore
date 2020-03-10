@@ -1,0 +1,6 @@
+node_modules
+dist
+package-lock.json
+*.cache
+paste/*.m3u8
+cache_files/*.cache

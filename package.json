@@ -1,0 +1,43 @@
+{
+    "name": "mediaextractor",
+    "version": "1.0.0",
+    "description": "",
+    "scripts": {
+        "test": " npm run build && node dist/tests.js",
+        "clean": "rimraf dist/",
+        "build": "npm run clean && babel ./ --ignore node_modules/ --out-dir dist/ --copy-files",
+        "start": "rm -rf ./paste/*.m3u8 && rm -rf ./cache_files/*.cache && npm run build && node dist/webapp/webapp.js"
+    },
+    "author": "",
+    "license": "MIT",
+    "dependencies": {
+        "async-request": "^1.2.0",
+        "babel-plugin-transform-object-rest-spread": "^6.26.0",
+        "babel-preset-env": "^1.7.0",
+        "babel-preset-es2015-without-strict": "0.0.4",
+        "btoa": "^1.2.1",
+        "cloudscraper": "^4.5.0",
+        "cors": "^2.8.5",
+        "crypto-js": "^4.0.0",
+        "express": "^4.17.1",
+        "form-data": "^3.0.0",
+        "googleapis": "^39.2.0",
+        "node-fetch": "^2.6.0",
+        "node-html-parser": "^1.1.19",
+        "promise": "^8.0.3",
+        "request-promise": "^4.2.5",
+        "rimraf": "^3.0.1",
+        "tough-cookie": "^2.3.4",
+        "url-join": "^4.0.1",
+        "uuid": "^3.4.0"
+    },
+    "devDependencies": {
+        "babel-cli": "^6.26.0",
+        "babel-core": "^6.26.3",
+        "babel-loader": "^8.0.6",
+        "babel-polyfill": "^6.26.0",
+        "babel-preset-es2015": "^6.24.1",
+        "babel-preset-stage-0": "^6.24.1",
+        "nodemon": "^2.0.2"
+    }
+}
